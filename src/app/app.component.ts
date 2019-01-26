@@ -19,6 +19,7 @@ export class AppComponent implements OnInit {
     private http: HttpClient,
     private loggerService: LoggerService
   ) {
+    console.log("App Component constructor");
     this.translateService.setDefaultLang("en");
     this.translateService.use(device.language);
 

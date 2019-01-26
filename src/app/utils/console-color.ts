@@ -27,7 +27,23 @@ interface Console {
   errorColor(message?: any, ...optionalParams: any[]): void;
   logColor(message?: any, ...optionalParams: any[]): void;
   warnColor(message?: any, ...optionalParams: any[]): void;
+
+  logNativeScript(message?: any, ...optionalParams: any[]): void;
+  logIos(message?: any, ...optionalParams: any[]): void;
+  logAndroid(message?: any, ...optionalParams: any[]): void;
 }
+
+console.logNativeScript = (message?: any, ...optionalParams: any[]) => {
+  console.log(colorBlue, "NATIVESCRIPT EVENT: " + message, colorReset);
+};
+
+console.errorColor = (message?: any, ...optionalParams: any[]) => {
+  console.log(colorDim, "IOS EVENT" + message, colorReset);
+};
+
+console.warnColor = (message?: any, ...optionalParams: any[]) => {
+  console.log(colorGreen, "ANDROID EVENT" + message, colorReset);
+};
 
 console.logColor = (message?: any, ...optionalParams: any[]) => {
   console.log(colorCyan, message, colorReset);

@@ -18,6 +18,8 @@ import { HttpClient } from "@angular/common/http";
 import "./utils/console-color";
 import { AppConfigModule } from "./config/app-config.module";
 
+console.log("App Module code");
+
 @NgModule({
   bootstrap: [AppComponent],
   imports: [
@@ -41,4 +43,8 @@ import { AppConfigModule } from "./config/app-config.module";
 /*
 Pass your application module to the bootstrapModule function located in main.ts to start your app
 */
-export class AppModule {}
+export class AppModule {
+  constructor(){
+    console.log("App Module code");
+  }
+}
