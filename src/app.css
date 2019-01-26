@@ -1,0 +1,9 @@
+@import url("~/platform.css");
+
+Page {
+    background-color: #4b5833;
+}
+
+Label {
+    color: red;
+}

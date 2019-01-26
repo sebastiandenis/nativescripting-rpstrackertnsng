@@ -1,0 +1,14 @@
+{
+    "files.exclude": {
+        "**/*.js": true,
+        "**/*.js.map": true
+    },
+    "search.exclude": {
+        "**/*.js": true,
+        "**/*.js.map": true,
+        "nativescript/hooks": true,
+        "nativescript/node_modules": true,
+        "nativescript/platforms": true,
+        "nativescript/src/app": true
+    }
+}

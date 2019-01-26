@@ -1,0 +1,15 @@
+{
+  "app": {
+    "title": "Moja aplikacja"
+  },
+  "modules": {
+    "auth": {
+      "pages": {
+        "auth": {
+          "login": "Zaloguj",
+          "register": "Utwórz konto"
+        }
+      }
+    }
+  }
+}
