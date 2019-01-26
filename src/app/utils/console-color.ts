@@ -37,11 +37,11 @@ console.logNativeScript = (message?: any, ...optionalParams: any[]) => {
   console.log(colorBlue, "NATIVESCRIPT EVENT: " + message, colorReset);
 };
 
-console.errorColor = (message?: any, ...optionalParams: any[]) => {
+console.logIos = (message?: any, ...optionalParams: any[]) => {
   console.log(colorDim, "IOS EVENT" + message, colorReset);
 };
 
-console.warnColor = (message?: any, ...optionalParams: any[]) => {
+console.logAndroid = (message?: any, ...optionalParams: any[]) => {
   console.log(colorGreen, "ANDROID EVENT" + message, colorReset);
 };
 
