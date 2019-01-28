@@ -31,7 +31,7 @@
       "sourceMaps": true,
       "watch": true,
       "stopOnEntry": false,
-      "tnsArgs": ["--debug-brk", "--bundle"]
+      "tnsArgs": ["--debug-brk"]
     },
     {
       "name": "Attach on Android",
