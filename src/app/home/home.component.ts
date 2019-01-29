@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { Page } from "ui/page";
 import { device } from "platform";
+import { Store } from "../core/state/app-store";
+import { PtItem } from "../core/models/domain";
 
 @Component({
   selector: "ns-home",
@@ -9,11 +11,28 @@ import { device } from "platform";
 })
 export class HomeComponent implements OnInit {
   public hidden = true;
-  public myAppText = "Hello";
-  constructor(private page: Page) {
+  public items$ = this.store.select<PtItem[]>("backlogItems");
+
+  constructor(private page: Page, private store: Store) {
     this.page.actionBarHidden = this.hidden;
     this.page.backgroundSpanUnderStatusBar = true;
-    this.myAppText = device.language;
+
+    const fakeBacklogItems: PtItem[] = [
+      {
+        id: 1,
+        title: "item 1",
+        dateCreated: new Date(),
+        dateModified: new Date()
+      },
+      {
+        id: 2,
+        title: "item 2",
+        dateCreated: new Date(),
+        dateModified: new Date()
+      }
+    ];
+
+    this.store.set("backlogItems", fakeBacklogItems);
   }
 
   ngOnInit(): void {}

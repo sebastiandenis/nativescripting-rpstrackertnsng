@@ -4,6 +4,7 @@ import { AuthService, LoggerService } from "./services";
 import {} from "./services/logger.service";
 import { SERVICES } from "./services";
 import { RpsErrorHandler } from "./helpers";
+import { Store } from "./state/app-store";
 
 @NgModule({
   declarations: [],
@@ -14,7 +15,8 @@ import { RpsErrorHandler } from "./helpers";
       provide: ErrorHandler,
       useClass: RpsErrorHandler
     },
-    ...SERVICES
+    ...SERVICES,
+    Store
   ]
 })
 export class CoreModule {
