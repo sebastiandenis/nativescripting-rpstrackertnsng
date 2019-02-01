@@ -17,22 +17,6 @@ export class HomeComponent implements OnInit {
     this.page.actionBarHidden = this.hidden;
     this.page.backgroundSpanUnderStatusBar = true;
 
-    const fakeBacklogItems: PtItem[] = [
-      {
-        id: 1,
-        title: "item 1",
-        dateCreated: new Date(),
-        dateModified: new Date()
-      },
-      {
-        id: 2,
-        title: "item 2",
-        dateCreated: new Date(),
-        dateModified: new Date()
-      }
-    ];
-
-    this.store.set("backlogItems", fakeBacklogItems);
   }
 
   ngOnInit(): void {}
